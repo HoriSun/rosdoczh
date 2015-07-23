@@ -8,13 +8,13 @@
 ###1.2 编译系统(Build System)
 1. [x] `编译系统`从`源代码`生成`目标制品(target)`来给用户使用
 2. [x] 生成目标可以是: `库文件`, `可执行程序`, 生成的`脚本文件(scripts)`, 导出的`接口`(如C++头文件) 或任何非静态源码的制品。
-3. [ ] 其他编译系统：
-    - 基于控制台(console)的编译系统: 
+3. [ ] 其他编译系统：  
+    - 基于控制台(console)的编译系统:
         - [GNU Make](http://www.gnu.org/software/make/)
         - [GNU Autotools](http://www.gnu.org/software/autoconf/)
         - [CMake](http://www.cmake.org/)
-        - [Apache Ant](http://ant.apache.org/) (主要用于Java)
-    - 集成开发环境(Integrated development environment, IDE), 通常是基于上述使用控制台命令的编译系统，并为之提供图形界面(GUI)。:
+        - [Apache Ant](http://ant.apache.org/) (主要用于Java)    
+    - 集成开发环境(Integrated development environment, IDE)，通常是基于上述使用控制台命令的编译系统，并为之提供图形界面(GUI)。:  
         - Qt Creator
         - Microsoft Visual Studio
         - Eclipse
@@ -32,6 +32,6 @@
         - 依赖对象的位置(如头文件和链接库的位置)
         - 需要编译的目标(target)
          生成目标的位置
-        - 安装目标的位置
-5. [x] ROS所使用的catkin是扩展了CMake的定制编译系统，在CMake的基础上，增加了管理ROS包(package)之间依赖关系的能力。
-    catkin提供了`catkin_create_pkg`命令，可以用它很方便地创建package,不必手动建立`CMakeLists.txt`和`package.xml`等文件。
+        - 安装目标的位置  
+5. [x] ROS所使用的catkin是扩展了CMake的定制编译系统，在CMake的基础上，增加了管理ROS包(package)之间依赖关系的能力。   
+    catkin提供了`catkin_create_pkg`命令，可以用它很方便地创建 package, 不必手动建立 `CMakeLists.txt` 和 `package.xml` 等文件。
