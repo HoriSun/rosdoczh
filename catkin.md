@@ -2,12 +2,12 @@
 
 ##1.[概念总览](http://wiki.ros.org/catkin/conceptual_overview)
 ###1.1 Catkin概览
-1. [x] ROS的官方编译系统, 之前使用的是_rosbuild_.
+1. [x] ROS Hydro和ROS Indigo的官方编译系统, 在Hydro之前使用的是_rosbuild_.
 2. [ ] 名称由来: `catkin` 意为`柳絮`,因其开发公司`Willow Garage`的名字意为`柳树车库`
 
 ###1.2 编译系统(Build System)
-1. [x] 编译系统从源代码生成目标制品(target)来给用户使用
-2. [x] 生成目标可以是: 库文件, 可执行程序, 生成的脚本文件(scripts), 导出的接口(如C++头文件) 或任何非静态源码的制品。
+1. [x] `编译系统`从`源代码`生成`目标制品(target)`来给用户使用
+2. [x] 生成目标可以是: `库文件`, `可执行程序`, 生成的`脚本文件(scripts)`, 导出的`接口`(如C++头文件) 或任何非静态源码的制品。
 3. [ ] 其他编译系统：
     - 基于控制台(console)的编译系统: 
         - [GNU Make](http://www.gnu.org/software/make/)
@@ -18,12 +18,20 @@
         - Qt Creator
         - Microsoft Visual Studio
         - Eclipse
-4. [ ] 需要提供给编译系统的信息:
-    - 工具链各部分的位置(如C++编译器的位置)
-    - 源码位置
-    - 代码依赖(dependency，指开发者自己写的代码内部的依赖，如C/C++头文件，python库等)
-    - 外部依赖(引用第三方库)
-    - 依赖对象的位置(如头文件和链接库的位置)
-    - 需要编译的目标(target)
-    - 生成目标的位置
-    - 安装目标的位置
+4. [x] 编译系统均需要一些配置信息来进行编译。基本配置方法有两种：
+    1. 使用文本文件配置，举例：
+        - `CMake`, 文件名`CMakeLists.txt`
+        - `GNU Make`, 文件名`Makefile`
+        - `Apache Ant`
+    2. 使用IDE时，则将其存入工程的元信息(meta-information)里,如VC++的工程文件
+    需要提供给编译系统的信息如下:
+        - 工具链各部分的位置(如C++编译器的位置)
+        - 源码位置
+        - 代码依赖(dependency，指开发者自己写的代码内部的依赖，如C/C++头文件，python库等)
+        - 外部依赖(引用第三方库)
+        - 依赖对象的位置(如头文件和链接库的位置)
+        - 需要编译的目标(target)
+         生成目标的位置
+        - 安装目标的位置
+5. [x] ROS所使用的catkin是扩展了CMake的定制编译系统，在CMake的基础上，增加了管理ROS包(package)之间依赖关系的能力。
+    catkin提供了`catkin_create_pkg`命令，可以用它很方便地创建package,不必手动建立`CMakeLists.txt`和`package.xml`等文件。
