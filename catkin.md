@@ -75,4 +75,8 @@
     + [如何手动建立一个package](http://wiki.ros.org/ROS/Tutorials/Creating%20a%20Package%20by%20Hand)
     + [CMakeLists.txt介绍](http://wiki.ros.org/catkin/CMakeLists.txt)
     + [package.xml文件介绍](http://wiki.ros.org/catkin/package.xml)
+    + [REP-0127 -- package.xml文件定义](http://www.ros.org/reps/rep-0127.html)
+    
+        > REP全称ROS Enhancement Proposal（ROS改进方案）, 类似于互联网领域IETF发布的RFC系列文档，用于提出并审议修改方案，不断优化ROS。
+    + [caktin教程](http://wiki.ros.org/catkin/Tutorials)
 
