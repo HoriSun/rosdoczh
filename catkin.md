@@ -1,6 +1,6 @@
 #Catkin入门
 
-##1.[概念总览](http://wiki.ros.org/catkin/conceptual_overview)
+##1.[概念总览 Conceptual Overview](http://wiki.ros.org/catkin/conceptual_overview)
 ###1.1 Catkin概览
 1. [x] ROS Hydro和ROS Indigo的官方编译系统, 在Hydro之前使用的是_rosbuild_.
 2. [ ] 名称由来: `catkin` 意为`柳絮`,因其开发公司`Willow Garage`的名字意为`柳树车库`
@@ -59,6 +59,6 @@
         
     3 directories, 2 files
     ```   
-       其中生成的[`CMakeLists.txt`](https://github.com/HoriSun/rosdoczh/blob/master/CMakeLists.txt)里包含了注释掉的    标准`CMakeLists.txt`文件结构，在给项目增加编译选项时，只需略加修改。同时也要注意同步修改[`packaages.xml`](https:    //github.com/HoriSun/rosdoczh/blob/master/package.xml)文件。packages.xml描述了这个`package`的一些基本信息，包含    名字、版本、维护者(`license`)、证书(`license`)、编译时依赖的packages、运行时依赖的packages。  
+       其中生成的[`CMakeLists.txt`](https://github.com/HoriSun/rosdoczh/blob/master/CMakeLists.txt)里包含了注释掉的    标准`CMakeLists.txt`文件结构，在给项目增加编译选项时，只需略加修改。同时也要注意同步修改[`packaages.xml`](https:    //github.com/HoriSun/rosdoczh/blob/master/package.xml)文件。packages.xml描述了这个`package`的一些基本信息，包含    名字、版本、维护者(`maintainer`)、证书(`license`)、编译时依赖的packages、运行时依赖的packages。  
        想更深入地了解catkin的依赖关系管理，参见catkin文档里的[`Dependency Management`](http://wiki.ros.org/catkin/conceptual_overview#Dependency_Management)。
 
