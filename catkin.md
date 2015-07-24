@@ -7,7 +7,9 @@
 
 ###1.2 编译系统(Build System)
 1. [x] `编译系统`从`源代码`生成`目标制品(target)`来给用户使用
+
 2. [x] 生成目标可以是: `库文件`, `可执行程序`, 生成的`脚本文件(scripts)`, 导出的`接口`(如C++头文件) 或任何非静态源码的制品。
+
 3. [ ] 其他编译系统：  
     - 基于控制台(console)的编译系统:
         + [GNU Make](http://www.gnu.org/software/make/)
@@ -18,6 +20,7 @@
         + Qt Creator
         + Microsoft Visual Studio
         + Eclipse
+
 4. [x] 编译系统均需要一些配置信息来进行编译。基本配置方法有两种：
     1. 使用文本文件配置，举例：
         + `CMake`, 文件名`CMakeLists.txt`
@@ -33,8 +36,11 @@
         + 需要编译的目标(target)
         + 生成目标的位置
         + 安装目标的位置  
+
 5. [x] ROS所使用的catkin是扩展了CMake的编译系统，在CMake的基础上，具有管理ROS包(package)之间依赖关系的能力，但同时可以应用于ROS以外的项目编译————在设计之初，catkin就被设计为[独立于ROS](http://wiki.ros.org/catkin/conceptual_overview#Decoupling_from_ROS)而又兼容ROS的编译系统。   
+
     catkin提供了`catkin_create_pkg`命令，可以用它很方便地创建 package, 不必手动建立 `CMakeLists.txt` 和 `package.xml` 等文件。  
+    
     操作示例：  
     ```sh
     >>> catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
@@ -59,6 +65,8 @@
         
     3 directories, 2 files
     ```   
-       其中生成的[`CMakeLists.txt`](https://github.com/HoriSun/rosdoczh/blob/master/CMakeLists.txt)里包含了注释掉的    标准`CMakeLists.txt`文件结构，在给项目增加编译选项时，只需略加修改。同时也要注意同步修改[`packages.xml`](https:    //github.com/HoriSun/rosdoczh/blob/master/package.xml)文件。packages.xml描述了这个`package`的一些基本信息，包含    名字、版本、维护者(`maintainer`)、证书(`license`)、编译时依赖的packages、运行时依赖的packages。  
+    
+       其中生成的[`CMakeLists.txt`](https://github.com/HoriSun/rosdoczh/blob/master/CMakeLists.txt)里包含了注释掉的    标准`CMakeLists.txt`文件结构，在给项目增加编译选项时，只需略加修改。同时也要注意同步修改[`packages.xml`](https:    //github.com/HoriSun/rosdoczh/blob/master/package.xml)文件。packages.xml描述了这个`package`的一些基本信息，包含    名字、版本、维护者(`maintainer`)、证书(`license`)、编译时依赖的packages、运行时依赖的packages。 
+       
        想更深入地了解catkin的依赖关系管理，参见catkin文档里的[`Dependency Management`](http://wiki.ros.org/catkin/conceptual_overview#Dependency_Management)。
 
