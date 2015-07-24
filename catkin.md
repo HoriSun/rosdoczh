@@ -66,7 +66,13 @@
     3 directories, 2 files
     ```   
     
-       其中生成的[`CMakeLists.txt`](https://github.com/HoriSun/rosdoczh/blob/master/CMakeLists.txt)里包含了注释掉的    标准`CMakeLists.txt`文件结构，在给项目增加编译选项时，只需略加修改。同时也要注意同步修改[`packages.xml`](https:    //github.com/HoriSun/rosdoczh/blob/master/package.xml)文件。packages.xml描述了这个`package`的一些基本信息，包含    名字、版本、维护者(`maintainer`)、证书(`license`)、编译时依赖的packages、运行时依赖的packages。 
+    其中生成的[`CMakeLists.txt`](https://github.com/HoriSun/rosdoczh/blob/master/CMakeLists.txt)里包含了注释掉的    标准`CMakeLists.txt`文件结构，在给项目增加编译选项时，只需略加修改。同时也要注意同步修改[`packages.xml`](https:    //github.com/HoriSun/rosdoczh/blob/master/package.xml)文件。packages.xml描述了这个`package`的一些基本信息，包含    名字、版本、维护者(`maintainer`)、证书(`license`)、编译时依赖的packages、运行时依赖的packages。 
        
-       想更深入地了解catkin的依赖关系管理，参见catkin文档里的[`Dependency Management`](http://wiki.ros.org/catkin/conceptual_overview#Dependency_Management)。
+    想更深入地了解catkin的依赖关系管理，参见catkin文档里的[`Dependency Management`](http://wiki.ros.org/catkin/conceptual_overview#Dependency_Management)。
+       
+    延伸阅读(英文)：
+    + [使用catkin命令行工具建立package](http://wiki.ros.org/ROS/Tutorials/CreatingPackage)
+    + [如何手动建立一个package](http://wiki.ros.org/ROS/Tutorials/Creating%20a%20Package%20by%20Hand)
+    + [CMakeLists.txt介绍](http://wiki.ros.org/catkin/CMakeLists.txt)
+    + [package.xml文件介绍](http://wiki.ros.org/catkin/package.xml)
 
